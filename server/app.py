@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 
-from flask import Flask, jsonify, request, abort
+from flask import Flask, jsonify, request
 from flask_migrate import Migrate
-from sqlalchemy.exc import IntegrityError
 from models import db, Episode, Appearance, Guest
 
 # Creating Flask app instance
