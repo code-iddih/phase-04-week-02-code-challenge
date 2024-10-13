@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This code challenge is a chance for you to show off how much you've learned specifically about; models, relationships, and validations, routes and REST, and response structure. 
+TA Flask-based RESTful API for managing episodes, guests, and their appearances on a late show. The API allows users to fetch, create, update, and delete records related to episodes, guests, and appearances. This project uses SQLAlchemy for ORM (Object-Relational Mapping) and Flask-Migrate for database migrations.
 
 ## Features
 
@@ -63,7 +63,7 @@ This code challenge is a chance for you to show off how much you've learned spec
 
 ## Schema : Tables
 
-![Models](/models-img)
+![Models](/models-img.png)
 
 
 - An `Episode` has many `Guest`s through `Appearance`
