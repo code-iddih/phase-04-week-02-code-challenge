@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import MetaData
+from sqlalchemy import MetaData, CheckConstraint
 from sqlalchemy_serializer import SerializerMixin
+from sqlalchemy.orm import validates
 
 # Defining naming convention for foreign keys
 metadata = MetaData(naming_convention={
@@ -62,6 +63,12 @@ class Appearance(db.Model, SerializerMixin):
     # Relationships with overlaps parameter
     episode = db.relationship('Episode', back_populates='appearances', overlaps='guests')
     guest = db.relationship('Guest', back_populates='appearances', overlaps='episodes')
+
+    @validates('rating')
+    def validate_rating(self, key, value):
+        if not (1 <= value <= 5):
+            raise ValueError('Rating must be between 1 and 5.')
+        return value
 
     def __repr__(self):
         return f'<Appearance Episode ID {self.episode_id}, Guest ID {self.guest_id}, Rating {self.rating}>'
