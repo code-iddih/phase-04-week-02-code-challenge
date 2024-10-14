@@ -13,6 +13,8 @@ importlib-resources = "*"
 ipdb = "*"
 sqlalchemy-serializer = "*"
 gunicorn = "*"
+psycopg2-binary = "*"
+flask-restful = "*"
 
 [dev-packages]
 

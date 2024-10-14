@@ -20,11 +20,6 @@ db.init_app(app)
 
 # Routes
 
-# Home route
-@app.route('/', methods=['GET'])
-def home():
-    return "<h1>Welcome to the Late Show API!</h1>"
-
 # Route to get all episodes
 @app.route('/episodes', methods=['GET'])
 def get_episodes():
@@ -166,4 +161,4 @@ def delete_episode(id):
 
 # Running the application
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(port=5555, debug=True)
