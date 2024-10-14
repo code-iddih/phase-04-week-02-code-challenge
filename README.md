@@ -79,35 +79,40 @@ TA Flask-based RESTful API for managing episodes, guests, and their appearances 
 git clone git@github.com:code-iddih/phase-04-week-02-code-challenge.git
 ```
 
-*Step 1:* **Navigate to root directory:**
+*Step 2:* **Navigate to root directory:**
 
 ```txt
 cd phase-04-week-02-code-challenge
 ```
+*Step 3:* **Open in Visual Studio Code:**
 
-*Step 2:* **Install dependencies (listed in `Pipfile`):**
+```txt
+code .
+```
+
+*Step 4:* **Install dependencies (listed in `Pipfile`):**
 
 ```txt
 pipenv install
 ```
-*Step 3:* **Activate the virtual environment:**
+*Step 5:* **Activate the virtual environment:**
 
 ```txt
 pipenv shell
 ```
-*Step 4:* **Navigate to Server directory:**
+*Step 6:* **Navigate to Server directory:**
 
 ```txt
 cd server
 ```
-*Step 5:* **Run the application:**
+*Step 7:* **Run the application:**
 
 ```txt
 python3 app.py
 ```
-*Step 6:* **Test the Routes in the browser or API Platform:**
+*Step 8:* **Test the Routes in the browser or API Platform:**
 
-*Step 6:* **specifically Use API Platform to test for `PATCH` and `POST` routes::**
+*Step 9:* **specifically Use API Platform to test for `PATCH` and `POST` routes::**
 
 Downlaod any of them here:\
 [postman](https://postman.com)\
