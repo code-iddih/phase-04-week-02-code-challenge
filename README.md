@@ -112,7 +112,7 @@ python3 app.py
 ```
 *Step 8:* **Test the Routes in the browser or API Platform:**
 
-*Step 9:* **specifically Use API Platform to test for `PATCH` and `POST` routes::**
+*Step 9:* **specifically Use API Platform to test for `POST` route:**
 
 Downlaod any of them here:\
 [postman](https://postman.com)\
