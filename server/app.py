@@ -20,6 +20,11 @@ db.init_app(app)
 
 # Routes
 
+# Home route
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({"message": "Welcome to the Late Show API!"}), 200
+
 # Route to get all episodes
 @app.route('/episodes', methods=['GET'])
 def get_episodes():
