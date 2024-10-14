@@ -26,7 +26,7 @@ def home():
     return "<h1>Welcome to the Late Show API!</h1>"
 
 # Route to get all episodes
-@app.route('/episodes', methods=['GET'])
+@app.route('https://late-show.onrender.com/episodes', methods=['GET'])
 def get_episodes():
     episodes = Episode.query.all()
     episodes_list = [
@@ -39,7 +39,7 @@ def get_episodes():
     return jsonify(episodes_list), 200
 
 # Route to get a specific episode by ID
-@app.route('/episodes/<int:id>', methods=['GET'])
+@app.route('https://late-show.onrender.com/episodes/<int:id>', methods=['GET'])
 def get_episode(id):
     episode = Episode.query.get(id)
     
@@ -68,7 +68,7 @@ def get_episode(id):
     return jsonify(episode_data), 200
 
 # Route to get all guests
-@app.route('/guests', methods=['GET'])
+@app.route('https://late-show.onrender.com/guests', methods=['GET'])
 def get_guests():
     guests = Guest.query.all()
     guests_list = [
@@ -81,7 +81,7 @@ def get_guests():
     return jsonify(guests_list), 200
 
 # Route to create a new appearance
-@app.route('/appearances', methods=['POST'])
+@app.route('https://late-show.onrender.com/appearances', methods=['POST'])
 def create_appearance():
     try:
         data = request.get_json()
@@ -151,7 +151,7 @@ def create_appearance():
         return jsonify({"errors": ["Something went wrong."]}), 500
 
 # Route to delete an episode by ID
-@app.route('/episodes/<int:id>', methods=['DELETE'])
+@app.route('https://late-show.onrender.com/episodes/<int:id>', methods=['DELETE'])
 def delete_episode(id):
     episode = Episode.query.get(id)
 
